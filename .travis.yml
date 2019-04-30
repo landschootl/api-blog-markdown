@@ -1,0 +1,13 @@
+language: node_js
+node_js:
+  - "stable"
+deploy:
+  provider: heroku
+  api-key:
+    secure: $HEROKU_TOKEN
+  app: api-blog-markdown
+cache:
+  directories:
+  - node_modules
+script:
+  - npm install
