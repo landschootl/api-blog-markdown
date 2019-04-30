@@ -10,7 +10,7 @@
 * Go in the project `cd api-blog-markdown`
 * Install the dependencies `npm install`
 * Run the server `node server/server.js`
-* Open a browser and go to "http://localhost:8081/"
+* Open a browser and go to "http://localhost:3000/"
 
 ## Write an post in the blog 📝
 
@@ -32,7 +32,7 @@ Your content
 ## Recover all posts 📤
 
 * Run the server _(see the section above)_
-* Open a browser and go to "http://localhost:8081/posts" or open terminal and run `curl localhost:8081/posts`
+* Open a browser and go to "http://localhost:3000/posts" or open terminal and run `curl localhost:3000/posts`
 
 The schema of a post : 
 ```
