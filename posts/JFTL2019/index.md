@@ -1,3 +1,9 @@
+---
+title: JFTL2019
+date: 2019-05-21T20:12:01.169Z
+author: Victor Galand & Loic Roose
+---
+
 Le 09 avril dernier, nous avons eu la chance de participer à la 11ème édition de la Journée Française des tests logiciels,  événement annuel organisé par le comité Français des tests Logiciels. 
 
 La **JFTL2019** s’est déroulée cette année au Beffroi de Montrouge à Paris et a regroupé près de **1200 acteurs du test**. Cet événement est avant tout un lieu d’échanges, de rencontres et permet aux différents conférenciers de donner leurs retours d’expériences sur les stratégies et outils mis en places au sein de leurs structures respectives. 
