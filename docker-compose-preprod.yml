@@ -1,0 +1,10 @@
+version: '2'
+services:
+  api:
+    image: api-mardown-blog:latest
+    environment:
+      - HOSTNAME=https://api-blog-markdown.herokuapp.com/
+    labels:
+      contacts: Ludovic Landschoot
+      application_id: api-blog-markdown
+      io.rancher.scheduler.affinity:container_label_soft_ne: application_id=api-blog-markdown
