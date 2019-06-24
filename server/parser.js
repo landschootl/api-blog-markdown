@@ -46,8 +46,9 @@ function scanFilePost(nameFolder) {
  * @returns {{date: string, path: string, author: string, markdown: string, title: string}}
  */
 function buildPost(file, nameFolder){
-    var post = {path: '', title: '', date: '', author: '', markdown: ''};
-    post.path = '/posts/'+nameFolder+'/';
+    var post = {id: '', path: '', title: '', date: '', author: '', markdown: ''};
+    post.id = uuidv4();
+    post.path = '/content/'+nameFolder+'/';
     var count = 0;
     while (!eof(file)) {
         var line = fgets(file);
@@ -144,6 +145,17 @@ function fgets(handle) {
  */
 function eof(handle) {
     return (handle in filePtr) == false;
+}
+
+/**
+ * Allows generate uid
+ * @returns {void | string | never}
+ */
+function uuidv4() {
+    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+        var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+        return v.toString(16);
+    });
 }
 
 exports.scanPosts = scanPosts;
