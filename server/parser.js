@@ -1,4 +1,5 @@
 var fs = require('fs');
+const server = require('./server');
 
 // The url of the directory where the blog posts are
 const dirname = process.cwd()+'/posts/';
@@ -67,6 +68,9 @@ function buildPost(file, nameFolder){
                     break;
                 default:
                     post.markdown += (count === 6?'':'\n')+line;
+                    post.markdown = post.markdown.replace(/<img src="(.*?)"\/?>/, (a, b) => {
+                        return '<img src="'+ server.HOSTNAME + ':' + server.PORT +'/content/'+ nameFolder +'/'+ b +'>';
+                    })
             }
         }
         count += 1;
