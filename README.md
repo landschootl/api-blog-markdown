@@ -17,7 +17,6 @@
 * Create a folder in **/posts**
 * Create a file named **index.md** in this folder
 * Then, copy this content in this file :
-
 ```
 ---
 title: my first post
@@ -26,17 +25,21 @@ author: your name
 ---
 Your content
 ```
+
 * Feel free to add some images, medias (see our articles already present)...
 * And make your Pull Request !
 
-## Recover all posts 📤
+## Recover posts 📤
 
 * Run the server _(see the section above)_
-* Open a browser and go to "http://localhost:3000/posts" or open terminal and run `curl localhost:3000/posts`
+* Open a browser and go to "http://localhost:3000/posts" or open terminal and run 
+    * `curl localhost:3000/posts` to get all post
+    * `curl localhost:3000/posts/:id` to get one post
 
 The schema of a post : 
 ```
 {
+  id: '',
   title: '',
   path: '',
   date: '',
