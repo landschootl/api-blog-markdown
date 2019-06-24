@@ -70,7 +70,7 @@ function buildPost(file, nameFolder){
                 default:
                     post.markdown += (count === 6?'':'\n')+line;
                     post.markdown = post.markdown.replace(/<img src="(.*?)"\/?>/, (a, b) => {
-                        return '<img src="'+ server.HOSTNAME + ':' + server.PORT +'/content/'+ nameFolder +'/'+ b +'>';
+                        return '<img src="'+ server.HOSTNAME + ':' + server.PORT +'/content/'+ nameFolder +'/'+ b +'">';
                     })
             }
         }
